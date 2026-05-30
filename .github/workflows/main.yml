@@ -5,10 +5,16 @@ on:
     branches:
       - main
 jobs:
-  test-jobs:
+   test-jobs:
     runs-on: ubuntu-latest
 
     steps:
       - name: print welcome message
         run: echo "hello to my first test with GitHub Actions"
+
+      - name: checkout repository
+        uses: actions/checkout@v2
+
+      - name: List files in the repository
+        run: ls -la
       
